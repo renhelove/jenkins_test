@@ -1,5 +1,5 @@
 /* 需要 Docker Pipeline 插件 */
-node('docker') {
+node('master') {
     checkout scm
     stage('Build') {
         docker.image('php').inside {
